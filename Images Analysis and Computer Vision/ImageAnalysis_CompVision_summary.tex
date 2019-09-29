@@ -1,0 +1,172 @@
+%
+% Zusammenfassung Image Analysis & Computer Vision D-ITET
+% ===========================================================================
+% Author:			Marco Dober
+% Version:			0.1
+% Last changed: 	19.09.2019	
+% ---------------------------------------------------------------------------
+
+\documentclass[a4paper, fontsize=8pt, landscape, DIV=1]{scrartcl}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage[graphicx]{realboxes}
+% Include general settings and customized commands
+\input{settings/general}
+\input{settings/commands}
+%change page style for header
+\pagestyle{fancy}
+\footskip 20pt
+\rhead{Marco Dober}
+\lhead{Image Analysis \& Computer Vision}
+\chead{\thepage}
+\cfoot{}
+\headheight 17pt \headsep 10pt
+\title{Image Analysis \& Computer Vision}
+\author{Marco Dober}
+\date{\today}
+
+
+\begin{document}
+	\setcounter{secnumdepth}{3} %no enumeration of sections
+	\begin{multicols*}{4}
+		%
+		\section*{Disclaimer}
+		This summary is part of the lecture ``ETH Image Analysis \& Computer Vision'' by Prof. Van Gool, Prof. Konukoglu and Prof. Goksel  (HS19). It is based on the lecture. \\[6pt]
+		Please report errors to \href{mailto:doberm@student.ethz.ch}{doberm@student.ethz.ch} such that others can benefit as well.\\[6pt]	
+		The upstream repository can be found at \href{https://github.com/mrrebod/Summaries}{https://github.com/mrrebod/Summaries}
+		\vfill\null
+		\pagebreak
+		
+		\maketitle 
+		\thispagestyle{fancy}
+		
+		\section{Introduction}
+		Vision is important:
+		\begin{itemize}[noitemsep, label={$\blacktriangleright$}]
+			\item Half our brain is devoted to it
+			\item Developed many times douring evolution
+			\item It is non-contact
+			\item It can be implemenmted with high-resolution
+			\item Works with ambient EM-waves
+			\item yields color, texture, depth, motion, shape
+		\end{itemize}
+		\textcolor{red}{Take home message}:\\
+		\textbf{\textcolor{red}{For people vision is their most crucial sense, for good reason}}
+		\subsection{Perception of vision}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering Perception of \textbf{intensity}\\}
+				\includegraphics[width=\columnwidth, height=2cm]{images/Introduction/perc_intensity.png} 
+				The gray fields have the same intensity (same gray tone).
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering Perception of \textbf{color}\\}
+				\includegraphics[width=\columnwidth, height=2cm]{images/Introduction/perc_color.png}
+				The red squares have equal color
+			\end{flushright}
+		\end{minipage}
+		\hrule
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering Perception of \textbf{length}\\}
+				\includegraphics[width=\columnwidth, height=2cm]{images/Introduction/perc_length.png} 
+				the horizontal lines are equally long.
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering \textbf{Lines being straight}
+				\includegraphics[width=2cm, height=2cm]{images/Introduction/perc_straight.png}\\}
+				The lines do not have any curvature
+			\end{flushright}
+		\end{minipage}	
+		\hrule
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering Perception of \textbf{parallelism}\\}
+				\includegraphics[width=\columnwidth, height=2cm]{images/Introduction/perc_parallel.png} 
+				All lines are parallel.
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering Perception of \textbf{curvatures}
+				\includegraphics[width=2cm, height=2cm]{images/Introduction/perc_curvature.png}\\}
+				There is no spiral.
+			\end{flushright}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering Perception of \textbf{motion}\\}
+				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/perc_motion.png} 
+				The pole rotates about the vertical, it does not translate vertically.
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+		\begin{flushright}
+				{\centering The role of \textbf{context}
+				\includegraphics[width=3cm, height=3cm]{images/Introduction/perc_context.png}\\}
+				All encircled patterns are identical!
+			\end{flushright}
+		\end{minipage}
+		\par 
+		\textcolor{red}{Take home message}:\\
+		\textbf{\textcolor{red}{Effective vision needs more than sheer filtering and measuring}}
+		\subsection{Applications}
+		Most early applications where found in \textbf{production environments}, as these allow for \textbf{controlled conditions} and have \textbf{little uncertainty}. But some areas do not allow for much control: medical IP, remote sensing, surveillance, etc.\\
+		Currently Computer Vision (CV) is conquering the less controllable areas by storm:
+		\par  
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+		 		{\centering \textbf{Image enhancement:} mobile $\rightarrow$ DSLR\\}
+		 		\includegraphics[width=\columnwidth, height=5cm]{images/Introduction/app_enhancement.png} 
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering \textbf{Image retrieval, captioning}\\}
+				\includegraphics[width=\columnwidth, height=5cm]{images/Introduction/app_retrieval.png}
+			\end{flushright}
+		\end{minipage}
+		\hrule
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering \textbf{Autonomous vehicles}\\}
+				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_autonomous_vehicles.png} 
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering \textbf{Visual surveillance}\\}
+				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_surveillance.png}
+			\end{flushright}
+		\end{minipage}
+		\hrule
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				{\centering \textbf{Augmented Reality, e.g sports}\\}
+				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_augm_reality.png} 
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushright}
+				{\centering \textbf{Computer-assisted surgery}\\}
+				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_surgery.png}
+			\end{flushright}
+		\end{minipage}			
+		\par 
+		\textcolor{red}{Take home message}:\\
+		\textbf{\textcolor{red}{It is feasible now to let most things see and interpret their environment.}}
+		
+		\subsection{The nature of light}
+		\subsubsection{Light as an EM wave...}
+		\subsubsection{Interactions with matter}
+		Light as an EM wave...\\
+		interaction with matter...\\
+		
+		
+	\end{multicols*}
+	\setcounter{secnumdepth}{3}
+\end{document}
