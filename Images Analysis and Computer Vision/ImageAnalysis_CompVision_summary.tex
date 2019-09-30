@@ -147,13 +147,13 @@
 		\begin{minipage}[t]{0.49\columnwidth}
 			\begin{flushleft}
 				{\centering \textbf{Augmented Reality, e.g sports}\\}
-				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_augm_reality.png} 
+				\includegraphics[width=\columnwidth, height=2.5cm]{images/Introduction/app_augm_reality.png} 
 			\end{flushleft}
 		\end{minipage}
 		\begin{minipage}[t]{0.49\columnwidth}
 			\begin{flushright}
 				{\centering \textbf{Computer-assisted surgery}\\}
-				\includegraphics[width=\columnwidth, height=3cm]{images/Introduction/app_surgery.png}
+				\includegraphics[width=\columnwidth, height=2.5cm]{images/Introduction/app_surgery.png}
 			\end{flushright}
 		\end{minipage}			
 		\par 
@@ -161,10 +161,93 @@
 		\textbf{\textcolor{red}{It is feasible now to let most things see and interpret their environment.}}
 		
 		\subsection{The nature of light}
-		\subsubsection{Light as an EM wave...}
+		There are three different models to describe optical systems: 
+		\begin{enumerate}[noitemsep]
+			\item Geometrical optics
+			\item Physical optics $\rightarrow$ \textcolor{red}{\textbf{wave character}}   
+			\item Quantum-mechanical optics
+		\end{enumerate}
+		In this course we mainly only look at physical optics and the wave character of light. 		
+		\subsubsection{Light as an EM waves}
+		Self-sustaining exchange of electric and magnetic fields. An EM-wave is characterized with the following properties: 
+		\includegraphics[width=\columnwidth]{images/Introduction/em_wave.png}			
+			\begin{itemize}[noitemsep]
+				\item \textbf{Wavelength}
+				\item Direction of \textbf{propagation}
+				\item \textbf{Amplitude} of E
+				\item \textbf{Phase} 
+				\item Direction of \textbf{polarization }
+			\end{itemize}
+		\textbf{The spectrum:}\\
+		Normal ambient light is a mixture of wavelengths, polarization directions and phases. The visible range for humans is only a small fraction of the EM-waves-spectrum.\\
+		\begin{center}
+			\begin{tabular}{c l l}
+				\hline 
+				\hline
+				Wavelength [$nm$] &  & Color \\ 
+				\hline 
+				380 - 450 & $\rightarrow$ & \textcolor{violet}{violet} \\ 
+				450 - 490 & $\rightarrow$ & \textcolor{blue}{blue} \\ 
+				490 - 560 & $\rightarrow$ & \textcolor{green}{green} \\ 
+				560 - 590 & $\rightarrow$ & \textcolor{yellow}{yellow} \\ 
+				590 - 630 & $\rightarrow$ & \textcolor{orange}{orange} \\ 
+				630 - 760 & $\rightarrow$ & \textcolor{red}{red} \\
+				\hline
+				\hline 
+			\end{tabular}
+		\end{center}
+		%\includegraphics[height=3cm]{images/Introduction/visible_spectrum.png}
+		The visible range differs from humans to animals and also cameras may have different spectral sensitivities. There are also cameras for non-visible light such as infrared. The following picture shows the three color cones humans have and their sensitivity range: 
+		\includegraphics[width=\columnwidth]{images/Introduction/human_cones.png}
+		  
 		\subsubsection{Interactions with matter}
-		Light as an EM wave...\\
-		interaction with matter...\\
+		We look at the following types of interaction with matter: 
+		\begin{enumerate}[noitemsep]
+			\item \textbf{Absorption}
+				\begin{itemize}[label={$\rightarrow$}]
+					\item blue water
+				\end{itemize}
+			\item \textbf{Scattering}
+				\begin{itemize}[label={$\rightarrow$}]
+					\item blue sky
+					\item red sunset
+				\end{itemize}
+			\item \textbf{Reflection}
+				\begin{itemize}[label={$\rightarrow$}]
+					\item colored ink
+				\end{itemize} 
+			\item \textbf{Refraction}
+				\begin{itemize}[label={$\rightarrow$}]
+					\item dispersion by a prism
+				\end{itemize} 
+			\item \textbf{Diffraction} 
+		\end{enumerate}
+		 We look at few of those in more detail:\par 
+		 
+		 \textbf{2. Scattering}\\
+		 There are three types of scattering depending on the relative sizes of particles and wavelengths:
+		 \begin{enumerate}[label=(\alph*)]
+		 	\item Small particles: \textcolor{red}{\textbf{Rayleigh}} (strong wavelength dependent)
+		 	\item Comparable size: \textcolor{red}{\textbf{Mie}} (weakly wavelength dependent)
+		 	\item Large particles: \textcolor{red}{\textbf{Non-selective}} (wavelength independent)
+		 \end{enumerate}
+	 	If we look at the scattered energy it looks as follows: 
+	 	\includegraphics[width=\columnwidth]{images/Introduction/scattered_energy.png}
+	 	\clearpage
+	 	
+	 	Let's see some examples of these different scatter-types in our atmosphere:\\ 
+	 	\begin{minipage}[t]{0.49\columnwidth}
+	 		\begin{flushleft}
+	 			\includegraphics[width=\columnwidth]{images/Introduction/ex_ray_non.png}\\
+	 		\end{flushleft}
+	 	\end{minipage}
+	 	\begin{minipage}[b]{0.49\columnwidth}
+	 		\begin{flushleft}
+	 			\textbf{Rayleigh}: Tyndall effect (blue sky, red setting sun)\\
+	 			\textbf{Non-selective}: Grey clouds
+	 		\end{flushleft}
+	 	\end{minipage}
+ 		
 		
 		
 	\end{multicols*}
