@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.9.29)  30 SEP 2019 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.9.29)  3 OCT 2019 22:23
 entering extended mode
 **./ImageAnalysis_CompVision_summary.tex
 (ImageAnalysis_CompVision_summary.tex
@@ -1154,92 +1154,92 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{C:/Users/Marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-<images/Introduction/perc_intensity.png, id=41, 273.4215pt x 140.9265pt>
+<images/Introduction/perc_intensity.png, id=85, 273.4215pt x 140.9265pt>
 File: images/Introduction/perc_intensity.png Graphic file (type png)
 <use images/Introduction/perc_intensity.png>
 Package pdftex.def Info: images/Introduction/perc_intensity.png  used on input 
 line 59.
 (pdftex.def)             Requested size: 92.87445pt x 56.90503pt.
-<images/Introduction/perc_color.png, id=43, 372.1905pt x 308.352pt>
+<images/Introduction/perc_color.png, id=87, 372.1905pt x 308.352pt>
 File: images/Introduction/perc_color.png Graphic file (type png)
 <use images/Introduction/perc_color.png>
 Package pdftex.def Info: images/Introduction/perc_color.png  used on input line
  66.
 (pdftex.def)             Requested size: 92.87134pt x 56.90306pt.
-<images/Introduction/perc_length.png, id=44, 520.344pt x 278.84175pt>
+<images/Introduction/perc_length.png, id=88, 520.344pt x 278.84175pt>
 File: images/Introduction/perc_length.png Graphic file (type png)
 <use images/Introduction/perc_length.png>
 Package pdftex.def Info: images/Introduction/perc_length.png  used on input lin
 e 74.
 (pdftex.def)             Requested size: 92.87183pt x 56.90338pt.
-<images/Introduction/perc_straight.png, id=45, 242.70676pt x 266.1945pt>
+<images/Introduction/perc_straight.png, id=89, 242.70676pt x 266.1945pt>
 File: images/Introduction/perc_straight.png Graphic file (type png)
 <use images/Introduction/perc_straight.png>
 Package pdftex.def Info: images/Introduction/perc_straight.png  used on input l
 ine 81.
 (pdftex.def)             Requested size: 56.90276pt x 56.90575pt.
-<images/Introduction/perc_parallel.png, id=46, 269.20575pt x 175.25475pt>
+<images/Introduction/perc_parallel.png, id=90, 269.20575pt x 175.25475pt>
 File: images/Introduction/perc_parallel.png Graphic file (type png)
 <use images/Introduction/perc_parallel.png>
 Package pdftex.def Info: images/Introduction/perc_parallel.png  used on input l
 ine 89.
 (pdftex.def)             Requested size: 92.87196pt x 56.90363pt.
-<images/Introduction/perc_curvature.png, id=47, 306.54526pt x 302.93175pt>
+<images/Introduction/perc_curvature.png, id=91, 306.54526pt x 302.93175pt>
 File: images/Introduction/perc_curvature.png Graphic file (type png)
 <use images/Introduction/perc_curvature.png>
 Package pdftex.def Info: images/Introduction/perc_curvature.png  used on input 
 line 96.
 (pdftex.def)             Requested size: 56.90175pt x 56.90125pt.
-<images/Introduction/perc_motion.png, id=48, 383.63326pt x 331.83975pt>
+<images/Introduction/perc_motion.png, id=92, 383.63326pt x 331.83975pt>
 File: images/Introduction/perc_motion.png Graphic file (type png)
 <use images/Introduction/perc_motion.png>
 Package pdftex.def Info: images/Introduction/perc_motion.png  used on input lin
 e 103.
 (pdftex.def)             Requested size: 92.86996pt x 85.35475pt.
-<images/Introduction/perc_context.png, id=49, 354.123pt x 349.305pt>
+<images/Introduction/perc_context.png, id=93, 354.123pt x 349.305pt>
 File: images/Introduction/perc_context.png Graphic file (type png)
 <use images/Introduction/perc_context.png>
 Package pdftex.def Info: images/Introduction/perc_context.png  used on input li
 ne 110.
 (pdftex.def)             Requested size: 85.35869pt x 85.35927pt.
-<images/Introduction/app_enhancement.png, id=50, 355.92975pt x 386.6445pt>
+<images/Introduction/app_enhancement.png, id=94, 355.92975pt x 386.6445pt>
 File: images/Introduction/app_enhancement.png Graphic file (type png)
 <use images/Introduction/app_enhancement.png>
 Package pdftex.def Info: images/Introduction/app_enhancement.png  used on input
  line 124.
 (pdftex.def)             Requested size: 92.87083pt x 142.25977pt.
-<images/Introduction/app_retrieval.png, id=51, 334.24875pt x 446.26724pt>
+<images/Introduction/app_retrieval.png, id=95, 334.24875pt x 446.26724pt>
 File: images/Introduction/app_retrieval.png Graphic file (type png)
 <use images/Introduction/app_retrieval.png>
 Package pdftex.def Info: images/Introduction/app_retrieval.png  used on input l
 ine 130.
 (pdftex.def)             Requested size: 92.86987pt x 142.26367pt.
-<images/Introduction/app_autonomous_vehicles.png, id=52, 463.7325pt x 291.489pt
+<images/Introduction/app_autonomous_vehicles.png, id=96, 463.7325pt x 291.489pt
 >
 File: images/Introduction/app_autonomous_vehicles.png Graphic file (type png)
 <use images/Introduction/app_autonomous_vehicles.png>
 Package pdftex.def Info: images/Introduction/app_autonomous_vehicles.png  used 
 on input line 137.
 (pdftex.def)             Requested size: 92.87222pt x 85.35692pt.
-<images/Introduction/app_surveillance.png, id=53, 337.26pt x 239.09325pt>
+<images/Introduction/app_surveillance.png, id=97, 337.26pt x 239.09325pt>
 File: images/Introduction/app_surveillance.png Graphic file (type png)
 <use images/Introduction/app_surveillance.png>
 Package pdftex.def Info: images/Introduction/app_surveillance.png  used on inpu
 t line 143.
 (pdftex.def)             Requested size: 92.87286pt x 85.35843pt.
-<images/Introduction/app_augm_reality.png, id=54, 313.17pt x 185.493pt>
+<images/Introduction/app_augm_reality.png, id=98, 313.17pt x 185.493pt>
 File: images/Introduction/app_augm_reality.png Graphic file (type png)
 <use images/Introduction/app_augm_reality.png>
 Package pdftex.def Info: images/Introduction/app_augm_reality.png  used on inpu
 t line 150.
 (pdftex.def)             Requested size: 92.87175pt x 71.13055pt.
-<images/Introduction/app_surgery.png, id=55, 283.0575pt x 190.91325pt>
+<images/Introduction/app_surgery.png, id=99, 283.0575pt x 190.91325pt>
 File: images/Introduction/app_surgery.png Graphic file (type png)
 <use images/Introduction/app_surgery.png>
 Package pdftex.def Info: images/Introduction/app_surgery.png  used on input lin
 e 156.
 (pdftex.def)             Requested size: 92.87369pt x 71.13202pt.
-<images/Introduction/em_wave.png, id=56, 556.479pt x 269.20575pt>
+<images/Introduction/em_wave.png, id=100, 556.479pt x 269.20575pt>
 File: images/Introduction/em_wave.png Graphic file (type png)
 <use images/Introduction/em_wave.png>
 Package pdftex.def Info: images/Introduction/em_wave.png  used on input line 17
@@ -1273,7 +1273,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--183
 
  []
 
-<images/Introduction/human_cones.png, id=57, 310.761pt x 88.53075pt>
+<images/Introduction/human_cones.png, id=101, 310.761pt x 88.53075pt>
 File: images/Introduction/human_cones.png Graphic file (type png)
 <use images/Introduction/human_cones.png>
 Package pdftex.def Info: images/Introduction/human_cones.png  used on input lin
@@ -1289,12 +1289,12 @@ Underfull \hbox (badness 7344) in paragraph at lines 200--202
 \OT1/cmr/m/n/8 eras for non-visible light such as in-frared.
  []
 
-<images/Introduction/scattered_energy.png, id=58, 514.92375pt x 229.45724pt>
-File: images/Introduction/scattered_energy.png Graphic file (type png)
-<use images/Introduction/scattered_energy.png>
-Package pdftex.def Info: images/Introduction/scattered_energy.png  used on inpu
-t line 235.
-(pdftex.def)             Requested size: 189.53534pt x 84.45668pt.
+<images/Introduction/absorption_earth.png, id=102, 504.6855pt x 387.24675pt>
+File: images/Introduction/absorption_earth.png Graphic file (type png)
+<use images/Introduction/absorption_earth.png>
+Package pdftex.def Info: images/Introduction/absorption_earth.png  used on inpu
+t line 230.
+(pdftex.def)             Requested size: 189.53534pt x 145.42989pt.
 [2 <./images/Introduction/perc_intensity.png> <./images/Introduction/perc_color
 .png> <./images/Introduction/perc_length.png> <./images/Introduction/perc_strai
 ght.png> <./images/Introduction/perc_parallel.png> <./images/Introduction/perc_
@@ -1303,66 +1303,137 @@ erc_context.png> <./images/Introduction/app_enhancement.png> <./images/Introduc
 tion/app_retrieval.png> <./images/Introduction/app_autonomous_vehicles.png> <./
 images/Introduction/app_surveillance.png> <./images/Introduction/app_augm_reali
 ty.png> <./images/Introduction/app_surgery.png> <./images/Introduction/em_wave.
-png> <./images/Introduction/human_cones.png> <./images/Introduction/scattered_e
-nergy.png>]
-<images/Introduction/ex_ray_non.png, id=96, 313.17pt x 203.5605pt>
+png> <./images/Introduction/human_cones.png> <./images/Introduction/absorption_
+earth.png>]
+<images/Introduction/scattered_energy.png, id=137, 514.92375pt x 229.45724pt>
+File: images/Introduction/scattered_energy.png Graphic file (type png)
+<use images/Introduction/scattered_energy.png>
+Package pdftex.def Info: images/Introduction/scattered_energy.png  used on inpu
+t line 241.
+(pdftex.def)             Requested size: 189.53534pt x 84.45668pt.
+<images/Introduction/ex_ray_non.png, id=138, 313.17pt x 203.5605pt>
 File: images/Introduction/ex_ray_non.png Graphic file (type png)
 <use images/Introduction/ex_ray_non.png>
 Package pdftex.def Info: images/Introduction/ex_ray_non.png  used on input line
- 241.
+ 246.
 (pdftex.def)             Requested size: 92.87335pt x 60.36664pt.
-<images/Introduction/ex_mie.png, id=97, 312.56775pt x 180.675pt>
+<images/Introduction/ex_mie.png, id=139, 312.56775pt x 180.675pt>
 File: images/Introduction/ex_mie.png Graphic file (type png)
 <use images/Introduction/ex_mie.png>
-Package pdftex.def Info: images/Introduction/ex_mie.png  used on input line 254
+Package pdftex.def Info: images/Introduction/ex_mie.png  used on input line 259
 .
 (pdftex.def)             Requested size: 92.87335pt x 53.68462pt.
-<images/Introduction/refl_diel.png, id=98, 270.41025pt x 311.9655pt>
+<images/Introduction/refl_diel.png, id=140, 270.41025pt x 311.9655pt>
 File: images/Introduction/refl_diel.png Graphic file (type png)
 <use images/Introduction/refl_diel.png>
 Package pdftex.def Info: images/Introduction/refl_diel.png  used on input line 
-268.
+274.
 (pdftex.def)             Requested size: 92.87335pt x 107.14267pt.
-<images/Introduction/refl_metal.png, id=99, 280.04625pt x 326.4195pt>
+<images/Introduction/refl_metal.png, id=141, 280.04625pt x 326.4195pt>
 File: images/Introduction/refl_metal.png Graphic file (type png)
 <use images/Introduction/refl_metal.png>
 Package pdftex.def Info: images/Introduction/refl_metal.png  used on input line
- 280.
+ 287.
 (pdftex.def)             Requested size: 92.87335pt x 108.2517pt.
- [3 <./images/Introduction/ex_ray_non.png> <./images/Introduction/ex_mie.png> <
-./images/Introduction/refl_diel.png> <./images/Introduction/refl_metal.png>] 
+<images/Introduction/refl_diffuse.png, id=142, 189.1065pt x 109.6095pt>
+File: images/Introduction/refl_diffuse.png Graphic file (type png)
+<use images/Introduction/refl_diffuse.png>
+Package pdftex.def Info: images/Introduction/refl_diffuse.png  used on input li
+ne 301.
+(pdftex.def)             Requested size: 92.87335pt x 53.83119pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--311
+[]\OT1/cmr/m/n/8 We dif-fer-en-ti-ate three types of re-flec-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--311
+\OT1/cmr/m/n/8 which de-pend on the sur-face struc-ture:
+ []
+
+<images/Introduction/refl_mirror.png, id=143, 195.129pt x 114.4275pt>
+File: images/Introduction/refl_mirror.png Graphic file (type png)
+<use images/Introduction/refl_mirror.png>
+Package pdftex.def Info: images/Introduction/refl_mirror.png  used on input lin
+e 314.
+(pdftex.def)             Requested size: 92.87335pt x 54.46362pt.
+<images/Introduction/refl_mixed.png, id=144, 187.29974pt x 110.21175pt>
+File: images/Introduction/refl_mixed.png Graphic file (type png)
+<use images/Introduction/refl_mixed.png>
+Package pdftex.def Info: images/Introduction/refl_mixed.png  used on input line
+ 327.
+(pdftex.def)             Requested size: 92.87335pt x 54.6483pt.
+<images/Introduction/snells_law.png, id=145, 220.825pt x 396.48125pt>
+File: images/Introduction/snells_law.png Graphic file (type png)
+<use images/Introduction/snells_law.png>
+Package pdftex.def Info: images/Introduction/snells_law.png  used on input line
+ 341.
+(pdftex.def)             Requested size: 73.91866pt x 132.71465pt.
+<images/Introduction/dispersion.png, id=146, 256.5585pt x 170.43675pt>
+File: images/Introduction/dispersion.png Graphic file (type png)
+<use images/Introduction/dispersion.png>
+Package pdftex.def Info: images/Introduction/dispersion.png  used on input line
+ 355.
+(pdftex.def)             Requested size: 92.87335pt x 61.69786pt.
+<images/ImageAcq/back_lighting.png, id=147, 392.667pt x 293.29575pt>
+File: images/ImageAcq/back_lighting.png Graphic file (type png)
+<use images/ImageAcq/back_lighting.png>
+Package pdftex.def Info: images/ImageAcq/back_lighting.png  used on input line 
+374.
+(pdftex.def)             Requested size: 132.67415pt x 99.09715pt.
+<images/ImageAcq/directional_lighting.png, id=148, 481.19775pt x 346.896pt>
+File: images/ImageAcq/directional_lighting.png Graphic file (type png)
+<use images/ImageAcq/directional_lighting.png>
+Package pdftex.def Info: images/ImageAcq/directional_lighting.png  used on inpu
+t line 385.
+(pdftex.def)             Requested size: 132.67415pt x 95.64282pt.
+<images//ImageAcq/diffusive_lighting.png, id=149, 324.61275pt x 306.54526pt>
+File: images//ImageAcq/diffusive_lighting.png Graphic file (type png)
+<use images//ImageAcq/diffusive_lighting.png>
+Package pdftex.def Info: images//ImageAcq/diffusive_lighting.png  used on input
+ line 403.
+(pdftex.def)             Requested size: 92.87335pt x 87.70308pt.
+[3 <./images/Introduction/scattered_energy.png> <./images/Introduction/ex_ray_n
+on.png> <./images/Introduction/ex_mie.png> <./images/Introduction/refl_diel.png
+> <./images/Introduction/refl_metal.png> <./images/Introduction/refl_diffuse.pn
+g> <./images/Introduction/refl_mirror.png> <./images/Introduction/refl_mixed.pn
+g> <./images/Introduction/snells_law.png> <./images/Introduction/dispersion.png
+> <./images/ImageAcq/back_lighting.png> <./images/ImageAcq/directional_lighting
+.png> <./images//ImageAcq/diffusive_lighting.png>]
+
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 294.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 294.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 437.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 437.
 (ImageAnalysis_CompVision_summary.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 294.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 294.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 437.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 437.
 Package rerunfilecheck Info: File `ImageAnalysis_CompVision_summary.out' has no
 t changed.
-(rerunfilecheck)             Checksum: 6DFF8F465C3770C155DE474ACA75FD68;404.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 294.
+(rerunfilecheck)             Checksum: 6E5E102E7CE069F6C76255A3A2329E7A;1170.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 437.
  ) 
 Here is how much of TeX's memory you used:
- 22733 strings out of 492895
- 425435 string characters out of 3123735
- 646164 words of memory out of 3000000
- 26166 multiletter control sequences out of 15000+200000
+ 22802 strings out of 492895
+ 427475 string characters out of 3123735
+ 645164 words of memory out of 3000000
+ 26213 multiletter control sequences out of 15000+200000
  11082 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,11n,72p,9134b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,11n,72p,9134b,614s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx8.pfb><C:/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmmi8.pfb><C:/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Marco/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marco/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Marco
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
-/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb>
-Output written on ImageAnalysis_CompVision_summary.pdf (3 pages, 5153347 bytes)
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Marco/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marco/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/
+Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb><C:/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/symbols/msam10.pfb>
+Output written on ImageAnalysis_CompVision_summary.pdf (3 pages, 6179814 bytes)
 .
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 

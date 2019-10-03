@@ -31,7 +31,7 @@
 	\begin{multicols*}{4}
 		%
 		\section*{Disclaimer}
-		This summary is part of the lecture ``ETH Image Analysis \& Computer Vision'' by Prof. Van Gool, Prof. Konukoglu and Prof. Goksel  (HS19). It is based on the lecture. \\[6pt]
+		This summary is part of the lecture ``ETH Image Analysis \& Computer Vision'' by Prof. Van Gool, Prof. Konukoglu and Prof. Goksel  (HS19). It is based on the lecture slides and script. \\[6pt]
 		Please report errors to \href{mailto:doberm@student.ethz.ch}{doberm@student.ethz.ch} such that others can benefit as well.\\[6pt]	
 		The upstream repository can be found at \href{https://github.com/mrrebod/Summaries}{https://github.com/mrrebod/Summaries}
 		\vfill\null
@@ -222,7 +222,13 @@
 				\end{itemize} 
 			\item \textbf{Diffraction} 
 		\end{enumerate}
-		 We look at few of those in more detail:\par 
+		 We look at few of those in more detail:
+		 \par
+		  
+		 \textbf{1. Absorption}\\
+		 A nice example of absorption is earth's atmosphere which absorbs certain wavelengths of the incoming light. The absorbed frequencies correspond to resonance frequencies of molecules in earth's atmosphere.\\ 
+		 \includegraphics[width=\columnwidth]{images/Introduction/absorption_earth.png}
+		 \clearpage 
 		 
 		 \textbf{2. Scattering}\\
 		 There are three types of scattering depending on the relative sizes of particles and wavelengths:
@@ -231,9 +237,8 @@
 		 	\item Comparable size: \textcolor{red}{\textbf{Mie}} (weakly wavelength dependent)
 		 	\item Large particles: \textcolor{red}{\textbf{Non-selective}} (wavelength independent)
 		 \end{enumerate}
-	 	If we look at the scattered energy it looks as follows: 
+	 	If we look at the scattered energy it looks as follows:\\ 
 	 	\includegraphics[width=\columnwidth]{images/Introduction/scattered_energy.png}
-	 	\clearpage
 	 	
 	 	Let's see some examples of these different scatter-types in our atmosphere:\\ 
 	 	\begin{minipage}[t]{0.49\columnwidth}
@@ -257,11 +262,12 @@
  		\begin{minipage}[b]{0.49\columnwidth}
  			\begin{flushleft}
  				\textbf{Mie}: Colored cloud from volcanic eruption
+ 				\vspace{0.6cm}
  			\end{flushleft}
  		\end{minipage}
 		\par 
 		\textbf{3. Reflection:}\\
-		In mirror reflection we have: angle of reflection = angle of incident.\\
+		In mirror reflection we have:\\ angle of reflection = angle of incident.\\
 		Two different categories of reflective materials:\\
 		\begin{minipage}[t]{0.49\columnwidth}
 			\begin{flushleft}
@@ -271,7 +277,8 @@
 		\begin{minipage}[b]{0.49\columnwidth}
 			\begin{flushleft}
 				\textbf{Dielectric:}\\
-				For parallel polarization there exists the Brewster angle where $r=0$. 
+				For parallel polarization there exists the Brewster angle where $r=0$.
+				\vspace{1.2cm}
 			\end{flushleft}
 		\end{minipage}
 		\par 
@@ -284,9 +291,144 @@
 			\begin{flushleft}
 				\textbf{Conductor:}\\
 				Strong reflectors under all angles, more or less preserve polarization.
-				\vspace{1cm} 
+				\vspace{1.2cm}
 			\end{flushleft}
 		\end{minipage}
+	
+		We differentiate three types of reflection which depend on the surface structure: 
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images/Introduction/refl_diffuse.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\textbf{Diffuse:}\\
+				Also called \textbf{Lambertian}. Rough surfaces.
+				\vspace{0.2cm}
+			\end{flushleft}
+		\end{minipage}
+		\par
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images/Introduction/refl_mirror.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\textbf{Specular:}\\
+				Mirror-like surfaces.
+				\vspace{0.5cm}
+			\end{flushleft}
+		\end{minipage}
+		\par 
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images/Introduction/refl_mixed.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\textbf{Mixed:}\\
+				Mix of diffuse and specular.
+				\vspace{0.5cm}
+			\end{flushleft}
+		\end{minipage}
+		\par 
+		\textbf{4. Refraction:}\\
+		\begin{minipage}[t]{0.39\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images/Introduction/snells_law.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.59\columnwidth}
+			\begin{flushleft}
+				Effect of the bending of light if it hits an interface of two materials with different refraction index $n=\sqrt{\epsilon\mu}$. The bending is described through \textbf{\textcolor{red}{Snell's law}}:\\
+				%\vspace{0.2cm}
+				\ceqbox{n_1\sin\theta_1=n_2\sin\theta_2}
+				\vspace{1.1cm}
+			\end{flushleft}
+		\end{minipage}
+		\par 
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images/Introduction/dispersion.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\textbf{Dispersion:}\\
+				The bending is dependent of the frequency (wavelength) of the light. 
+				\vspace{0.2cm}
+			\end{flushleft}
+		\end{minipage}
+		\vfill\null
+		\columnbreak
+
+		\section{Image Acquisition}	
+		\subsection{Illumination}
+		Well designed illumination often is key in visual inspection and can extremely simplify the image processing. Here is an overview of different illumination techniques:
+		
+		\subsubsection{Back-lighting}
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth,]{images/ImageAcq/back_lighting.png}\\
+		\end{center}
+		
+		\textbf{How:}\\
+		Lamps are placed behind a transmitting diffuser plate which is located behind the object
+		\par 
+		\textbf{Why:}\\
+		Creates \textbf{high-contrast} silhouette images, easy to handle with \textbf{binary vision} (only two intensity levels, black and white). Often used in inspection.
+	
+		\subsubsection{Directional-lighting}
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth,]{images/ImageAcq/directional_lighting.png}\\
+		\end{center}
+	
+		\textbf{How:}\\
+		Light source shines directly on object, maybe under a certain angle.
+		\par 
+		\textbf{Why:}\\
+		\vspace{-0.5cm}
+		\begin{itemize}[noitemsep]
+			\item Generation of \textbf{specular reflection} (e.g. crack detection (see figure above))
+			\item Generation of \textbf{sharp shadows}
+		\end{itemize}
+		\vfill\null
+		\columnbreak
+		
+		\subsubsection{Diffuse-lighting}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images//ImageAcq/diffusive_lighting.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\textbf{Left:}\\
+				Direct lighting produced large changes in brightness due to specular reflection.\\
+				\vspace{0.2cm}
+				\textbf{right:}\\
+				Diffusive lighting reduces bright spots. 
+				\vspace{0.2cm}
+			\end{flushleft}
+		\end{minipage}
+	
+		\textbf{How:}\\
+		Do not directly shine with light source on object, but rather indirectly with the help of a diffusive surface. It does not reduces the specular reflection, but increases the diffuse reflection component, yielding in less variations.
+		\par 
+		\textbf{Why:}\\
+		Prevents sharp shadows and large intensity variations over glossy surface.  
+	
+		\subsubsection{Polarized-lighting}
+		\subsubsection{Colored-lighting}
+		\subsubsection{Structures-lighting}
+		\subsubsection{Stroboscopic-lighting}
+		
+		\subsection{Cameras}
+		
+		\section{Feature Extraction}	
+	
 		 
 		
 	\end{multicols*}
