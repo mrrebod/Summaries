@@ -8,7 +8,7 @@
 
 \documentclass[a4paper, fontsize=8pt, landscape, DIV=1]{scrartcl}
 \usepackage{lastpage}
-\usepackage{hyperref}
+\usepackage{hyperref, makecell}
 \usepackage[graphicx]{realboxes}
 % Include general settings and customized commands
 \input{settings/general}
@@ -421,14 +421,220 @@
 		Prevents sharp shadows and large intensity variations over glossy surface.  
 	
 		\subsubsection{Polarized-lighting}
+		The polarization direction is the one of the E-Wave. Normally, light is composed of many waves with different polarizations. \\
+		Following picture shows a polarizer/analyzer configuration:\\
+		\includegraphics[width=\columnwidth]{images//ImageAcq/polarizer_analyzer.png}
+		The intensity seen from the observer depends on the angle $\theta$ and is described by the \textcolor{red}{\textbf{law of Malu}s}:\\
+		\ceqbox{I(\theta)=I(0)\cos^2\theta}
+		There are 2 uses for polarized lighting:
+		\begin{enumerate}[noitemsep]
+			\item Improve contrast between Lambertian and specular reflection.
+			\item Improve contrast between dielectrics and metals.
+		\end{enumerate}
+		\vfill\null
+		\columnbreak
+		
+		\textbf{1. Specular vs. Lambertian}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/diffuse_specular.png}\\
+		\end{center}
+		\textbf{How:}\\
+		Polarizer and analyzer in crossed arrangement. Specular reflection keeps polarization, Lambertian reflection depolarizes, because of this the arrangement reduces the large dynamic range caused by glare. 
+		\par 
+		\textbf{Why:}\\
+		Increases contrast between Lambertian and specular reflection (specular reflection gets blocked).
+		
+		\textbf{2. Dielectric vs. Metal}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/dielectric_metal.png}\\
+		\end{center}
+		\textbf{How:}\\
+		Shine non-polarized light at Brewster angle on object. The dielectric will not reflect the parallel polarized component (Brewster angle...) and the perpendicular component is filtered out by the analyzer, hence the dielectric parts of the object will be really dark.  
+		\par 
+		\textbf{Why:}\\
+		Increases contrast between dielectrics and metals (dielectric reflection gets blocked).
+		\vfill\null
+		\columnbreak
+		
 		\subsubsection{Colored-lighting}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images//ImageAcq/white_light.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth]{images//ImageAcq/red_light.png}\\
+			\end{flushleft}
+		\end{minipage}
+		The contrast between the red label and the green PCB is increased when red light is shined on it (right) in comparison to white light (left).\\
+		\par 
+		\textbf{How:}\\
+		Shine colored light at an object and maybe also use an bandpass filter. You need to have in mind the spectral sensitivity of your sensor!
+		\par 
+		\textbf{Why:}\\
+		\vspace{-0.5cm}
+		\begin{itemize}[noitemsep]
+			\item Highlight regions of similar color
+			\item Differentiate between specular and diffuse reflection
+			\item Comparing color
+		\end{itemize}
+		
 		\subsubsection{Structures-lighting}
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/structured_lighting.png}\\
+		\end{center}
+		\textbf{How:}\\
+		Spatially or temporally modulated light patterns are shined on a 3D object.
+		\par 
+		\textbf{Why:}\\
+		Obtain 3D info of object.
+		\par
+		More on this later...
+	
 		\subsubsection{Stroboscopic-lighting}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth, height=2cm]{images//ImageAcq/blur.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth, height=2cm]{images//ImageAcq/no_blur.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\par 
+		\textbf{How:}\\
+		High intensity light flashes. The light flash artificially shortens the sensors integration time. Mostly this is much cheaper than fast cameras.
+		\par 
+		\textbf{Why:}\\
+		Eliminate motion blur
 		
 		\subsection{Cameras}
+		\subsubsection{Camera models}
+		\textbf{Pinhole-model}\\
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth, height=2cm]{images//ImageAcq/pinhole_1.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[t]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth, height=2cm]{images//ImageAcq/pinhole_2.png}\\
+			\end{flushleft}
+		\end{minipage}
+		Light enters the box only through a small hole and an image is formed on a plane inside the box. If the whole is too small not enough light enters and additional diffraction occurs, if the whole is too big, the image gets blurry. The solution to this problem is a lens. From similar triangles the following formula follows:
+		\begin{center}
+			$\dfrac{X_i}{X_o}=\dfrac{Y_i}{Y_o}=\dfrac{f}{Z_o}=-m=$ \textit{linear magnification}\\
+		\end{center}
+		\vspace{0.5cm}
+		\textbf{The thin-lens model}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/thin_lens.png}\\
+		\end{center}
+		A lens captures more light and focuses it which gets rid off the problems of the pinhole. The price we pay is that only points at certain plane will be sharply imaged. Similar to the pinhole model the \textcolor{red}{\textbf{thin lens equation}} reads as:
+		\ceqbox{\dfrac{1}{Z_o}-\dfrac{1}{Z_i}=\dfrac{1}{f}}
+		\par 
+		\textbf{The depth-of-field}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/depth_of_field.png}\\
+		\end{center}
+		As already mentioned only at a specific plane the image will be sharp, we can define an interval $\Delta Z_o^-$ in which we have a reasonable sharpness of the image:
+		\begin{center}
+			$\Delta Z_o^-=Z_o-Z_o^-=\dfrac{Z_o(Z_o-f)}{Z_o+fd/b-f}$\\
+		\end{center}
+		The depth-of-field \textbf{decreases with $\mathbf{d}$} and \textbf{increases with $\mathbf{Z_o}$}. The more we focus with the lens, the smaller the depth-of-field is, because de rays diverge stronger outside of the focal point. There is also a trade off between collecting a lot light (big $d$) and a large depth-of-field (usable depth range).
+		\par 
+		\textcolor{red}{Take home message}:\\
+		\textbf{\textcolor{red}{In summary, introducing a lens to some extent solves the problem of insufficient light reaching the light detecting area of the camera. The price we pay is the loss of overall sharpness, i.e. points at a distance outside some range are no longer in focus.}}
 		
+		\subsubsection{Aberrations}
+		In the above lens-model we made three assumptions:
+		\begin{enumerate}[noitemsep]
+			\item All rays from a point are focused onto 1 image point
+			\item All image points in a single plane
+			\item Magnification is constant
+		\end{enumerate}
+		Deviations form this ideal are called \textcolor{red}{\textbf{aberrations}}. We differentiate between two types of aberrations:
+		\begin{enumerate}[noitemsep]
+			\item \textbf{Geometrical}: visible as image distortions or degradation like blurring
+				\begin{itemize}
+					\item Spherical aberration
+					\item astigmatism
+					\item \textbf{radial distortion} (most important)
+					\item coma
+				\end{itemize}
+			\item \textbf{Chromatic}: visible as different behavior for different wavelengths (color)
+		\end{enumerate}
+		
+		\textbf{Spherical Aberration:}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/spherical_aberration.png}\\
+		\end{center}
+		Rays parallel to the optical axis do not converge, because outer parts of the length yield smaller focal lengths. This results in blurry edges on the image.
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/spherical_aberration_2.png}\\
+		\end{center}
+		\vfill\null
+		\columnbreak
+		
+		\textbf{Radial distortion:}\\
+		\includegraphics[width=\columnwidth]{images//ImageAcq/radial_dist.png}\\
+		Different magnification for different angles of incident. This results in: 
+		\begin{itemize}
+			\item Lines become curves
+				\begin{itemize}[label={$\rightarrow$}]
+					\item Curvature increases as you move away form the center of distortion
+						\begin{itemize}[label={$\rightarrow$}]
+							\item Model assume this is the image center and there is a multiplicative factor on the pixel depending on the distance $r$ to the center:
+							\vspace{-0.4cm}
+							\ceqbox{d=1+\kappa_1r^2+\kappa_2r^4+\dots}
+							Only even factors because effect is symmetric.\\
+							This aberration can be corrected by software if the parameters $\kappa_1, \kappa_2, \dots$ are known.
+						\end{itemize} 
+				\end{itemize}
+		\end{itemize}
+		\includegraphics[width=\columnwidth]{images//ImageAcq/radial_dist_2.png}\\
+		\par 
+		\textbf{Chromatic distortion:}
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/chromatic_aberration.png}\\
+		\end{center}
+		Rays fo different wavelength focused on different planes. This can not be removed completely, but \textcolor{red}{\textbf{achromatization}} can be achieved at some well chosen wavelength pair, by combining lenses made of different glasses: 
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/achromatization.png}\\
+		\end{center}
+		Sometimes achromatization is achieved for more than two wavelengths. 
+		
+		\subsubsection{Device technologies}
+		We consider 2 types: 
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/ccd_cmos.png}\\
+		\end{center}
+		\begin{tabular}{l l}
+			\hline 
+			\hline
+			\thead{CCD} &  \thead{CMOS}  \\ 
+			\hline
+			Niche applications    & Consumer cameras  \\ 
+			Specific technology   & Standard IC technology\\ 
+			Expensive product.	  & Cheap \\ 
+			High power 			  & Low power \\ 
+			Higher fill rate 	  & Less sensitive  \\ 
+			Blooming			  & Per pixel amplif. \\ 
+			Sequential readout	  & Random pixel access\\ 
+								  & Smart pixels \\
+								  & On chip with other comp.\\
+			\hline 
+			\hline
+		\end{tabular}
+		\par
+		In 2006 was year of sales cross-over and in 2015 Sony said to stop CCD chip production. 
+		\subsubsection{Color cameras}
+		\subsubsection{Geometric models}
+		\subsubsection{Photometric camera model}
 		\section{Feature Extraction}	
-	
+		
 		 
 		
 	\end{multicols*}
