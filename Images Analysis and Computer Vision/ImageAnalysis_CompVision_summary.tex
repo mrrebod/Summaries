@@ -569,11 +569,11 @@
 		
 		\textbf{Spherical Aberration:}\\
 		\begin{center}
-			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/spherical_aberration.png}\\
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/spherical_aberration.png}\\
 		\end{center}
 		Rays parallel to the optical axis do not converge, because outer parts of the length yield smaller focal lengths. This results in blurry edges on the image.
 		\begin{center}
-			\includegraphics[width=0.7\columnwidth]{images//ImageAcq/spherical_aberration_2.png}\\
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/spherical_aberration_2.png}\\
 		\end{center}
 		\vfill\null
 		\columnbreak
@@ -594,7 +594,7 @@
 						\end{itemize} 
 				\end{itemize}
 		\end{itemize}
-		\includegraphics[width=\columnwidth]{images//ImageAcq/radial_dist_2.png}\\
+		\includegraphics[width=\columnwidth]{images/ImageAcq/radial_dist_2.png}\\
 		\par 
 		\textbf{Chromatic distortion:}
 		\begin{center}
@@ -631,7 +631,80 @@
 		\par
 		In 2006 was year of sales cross-over and in 2015 Sony said to stop CCD chip production. 
 		\subsubsection{Color cameras}
+		We consider 3 concepts: 
+		\begin{enumerate}[noitemsep]
+			\item Prism (with 3 Sensors)
+			\item Filter mosaic 
+			\item Filter wheel 
+		\end{enumerate}
+		\vfill\null
+		\columnbreak
+		
+		\textbf{1. Prism color camera}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/prism_color_camera.png}\\
+		\end{center}
+		Separates light in 3 different beams using dichroic prism\\ 
+		\textcolor{red}{ -- Requires 3 Sensors \& precise alignment}\\
+		\textcolor{ForestGreen}{+ Good color separation}
+		\par 
+		\textbf{2. Filter mosaic}\\
+		\vspace{-0.3cm}
+		\begin{center}
+			\includegraphics[width=0.9\columnwidth]{images/ImageAcq/bayer_filter.png}\\
+		\end{center}
+		Filter is directly coated on sensor. \textbf{Microlenses} are used to gain more light on pixels, because effective resolution is reduced by the filter.\\
+		\textcolor{red}{ -- Reduces resolution}\\
+		\textcolor{ForestGreen}{+ Chap and easy}
+		\par 
+		\textbf{3. Filter wheel}\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/filter_wheel.png}\\
+		\end{center}
+		Rotate multiple filters in front of lens
+		\textcolor{red}{ -- Only suitable for static scenes}\\
+		\textcolor{ForestGreen}{+ Allows more than 3 color bands}
+		
+		\begin{tabular}{l l l l}
+			\hline 
+			\hline 
+			Approach  &Prism  &Mosaic  &Wheel  \\
+			\hline  
+			\#Sensors &3  	 &1  	  &1  \\ 
+			Resolution&High  &Average &Good  \\ 
+			Cost	  &High  &Low	  &Average  \\ 
+			Framerate &High  &High	  &Low  \\ 
+			Artefacts &Low	 &Aliasing&Motion  \\ 
+			Bands	  &3  	 &3  	  &3 or more  \\
+					  &High-end &Low-end  &Scientific  \\  
+			\hline 
+			\hline 
+		\end{tabular} 
+	
 		\subsubsection{Geometric models}
+		\textbf{Perspective projection}\\
+		Perspective projection is the projection of the object to a \textbf{virtual image plane} in front of the lens. We choose the virtual image plane so that we do not need to care about the rotation of the picture. The \textbf{center of projection} is the \textbf{center of the lens} (pinhole).\\
+		\includegraphics[width=\columnwidth]{images/ImageAcq/perspective_projection.png}\\
+		\begin{itemize}[noitemsep]
+			\item \textit{Camera coordinate frame} (hence subscript $c$) lies at center of projection.
+			\item $Z_c$ coincides with the optical axis of the lens/objective.
+			\item $X_c$ is parallel to image rows, $Y_c$ is parallel to image columns.
+			\item $u$ and $v$ axes are parallel to $X_c$ and $Y_c$ axes. 
+			\item \textit{Principal point} = point where optical axis intercepts image plane.
+			\item The image of a point \textbf{P} $(X_c,Y_c,Z_c)$ is the intersection of the line through \textbf{P} and the center of projection with the image plane (plane at $f$).
+		\end{itemize}
+		The $(u,v)$-coordinates of this image point are directly found through similar triangles:\\
+		\ceqbox{u=f\dfrac{X_c}{Z_c}\qquad v=f\dfrac{Y_c}{Z_c}}
+		This model is an approximation, because for the image plane to lie a focal distance from the center of projection assumes the object to lie at a large distance compared to the focal length.
+		\par 
+		\textbf{Pseudo-orthographic projection}\\
+		First, if $Z$ is constant for all points of an object:
+		\ceqbox{x=kX\qquad y=kY,\qquad k=f/Z}
+		This is also a good approximation if $f/Z\approx constant$, i.e objects are small compared to distance from camera.
+		\par 
+		\textbf{Projection matrices}\\
+		
+		 
 		\subsubsection{Photometric camera model}
 		\section{Feature Extraction}	
 		
