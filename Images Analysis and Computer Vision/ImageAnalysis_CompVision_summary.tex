@@ -700,12 +700,140 @@
 		\textbf{Pseudo-orthographic projection}\\
 		First, if $Z$ is constant for all points of an object:
 		\ceqbox{x=kX\qquad y=kY,\qquad k=f/Z}
-		This is also a good approximation if $f/Z\approx constant$, i.e objects are small compared to distance from camera.
+		Second, this is also a good approximation if $f/Z\approx constant$, i.e objects are small compared to distance from camera.
 		\par 
 		\textbf{Projection matrices}\\
+		The perspective projection model is not very practical and incomplete in at least 2 ways: 
+		\begin{enumerate}[noitemsep]
+			\item 3D coordinates are specified in a \textit{world coordinate frame}, not the camera coordinate frame.
+			\item Image coordinates ($u,v$) must be translated to row and column numbers (pixels). 
+		\end{enumerate}
+		No additional refinements such as radial distortions are considered. 
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/rotation_matrices.png}\\
+		\end{center}
+		The position of the Camera is described by a point \textbf{C} (center of projection) and a $3\times3$ rotation matrix $\R$ where $\mathbf{r}_i$ denotes the $i$th column of the matrix. $\mathbf{r}_1$ corresponds to $X_c$, $\mathbf{r}_2$ to $Y_c$ and $\mathbf{r}_3$ to $Z_c$ of the camera coordinate frame. The corresponding image point then has $(u,v)-$coordinates:
+		\ceqbox{u=f\dfrac{\langle\mathbf{r}_1,\mathbf{P}-\mathbf{C}\rangle}{\langle\mathbf{r}_3,\mathbf{P}-\mathbf{C}\rangle}\quad \mathrm{and} \quad
+				v=f\dfrac{\langle\mathbf{r}_2,\mathbf{P}-\mathbf{C}\rangle}{\langle\mathbf{r}_3,\mathbf{P}-\mathbf{C}\rangle}} 
+		If \textbf{P} has coordinates $(X,Y,Z)$ and \textbf{C} has coordinates $(C_1,C_2,C_3)$ with respect to the \textit{world frame}, then:
+		\par   
+		$u=\dfrac{r_{11}(X_1-C_1)+r_{12}(Y-C_2)+r_{13}(Z-C_3)}{r_{31}(X_1-C_1)+r_{32}(Y-C_2)+r_{33}(Z-C_3)}$
+		\par
+		$v=\dfrac{r_{21}(X_1-C_1)+r_{22}(Y-C_2)+r_{23}(Z-C_3)}{r_{31}(X_1-C_1)+r_{32}(Y-C_2)+r_{33}(Z-C_3)}$
+		\par 
+		When working with digital images we want to define the position of an image point in so-called \textit{pixel coordinates}. A digital image thus is a 2-dimensional array of pixels, say $m$-columns and $n$-rows:\\
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/pixel_coordinates.png}\\
+		\end{center}
+		We want to indicate the position of an image point by its column and row number instead of the $(u,v)$-coordinates.
+		\begin{align*}
+			x&=k_xu+sv+x_0\\
+			y&=k_yv+y_0
+		\end{align*}
+		Here:
+		\vspace{-0.2cm}
+		\begin{itemize}[noitemsep]
+			\item $(x_0,y_0)$ are the pixel coordinates of the principal point.
+			\item $k_x$ is the number of pixels per unit length in horizontal direction (describes 1/width of a pixel)
+			\item $k_y$ is the number of pixels per unit length in vertical direction (describes 1/height of a pixel)
+			\item $k_x/k_y$ \textit{aspect ratio}, if $\neq1$, then pixel ware not square
+			\item $s$ indicates the skew, how much pixel deviates from a rectangular. 
+		\end{itemize}
+		$k_x, k_y, s, x_0, y_0$ are called \textcolor{red}{\textbf{internal camera parameters}}. When they are known the camera is \textcolor{red}{\textbf{internally calibrated}}.
+		\par 
+		Vector $\mathbf{C}$ and matrix $R$ are the \textcolor{red}{\textbf{external camera parameters}}. When they are known the camera is \textcolor{red}{\textbf{externally calibrated}}. 
+		\par 
+		\textcolor{red}{\textbf{Fully calibrated}} means internally and externally calibrated.
+		\par 
+		Perspective projection being a projective mapping, the image formation process in a pinhole camera (as described above) can be represented \textbf{linearly} by using \textbf{homogeneous coordinates}. Examples:\\
+		2D:\hspace{0.2cm}$\begin{pmatrix}x\\y\\z\end{pmatrix}\rightarrow\begin{pmatrix}x/z\\y/z\end{pmatrix}$\hspace{0.5cm}
+		3D:\hspace{0.2cm}$\begin{pmatrix}X\\Y\\Z\\W\end{pmatrix}\rightarrow\begin{pmatrix}X/W\\Y/W\\Z/W\end{pmatrix}$\\
+		Exploiting homogeneous coordinates we can write $(u,v)$ as:
+		\par
+		$\tau\begin{pmatrix}u\\v\\1\end{pmatrix}=
+		\begin{pmatrix}fr_{11}&fr_{12}&fr_{13}\\fr_{21}&fr_{22}&r_{23}\\r_{31}&r_{32}&r_{33}\end{pmatrix}
+		\begin{pmatrix}X-C_1\\Y-C_2\\Z-C_3\end{pmatrix}$
+		\par
+		and $(x,y)$ as:
+		\par 
+		$\tau\begin{pmatrix}x\\y\\1\end{pmatrix}=
+		\begin{pmatrix}k_x&s&x_0\\0&k_y&y_0\\0&0&1\end{pmatrix}
+		\tau\begin{pmatrix}u\\v\\1\end{pmatrix}$
+		\par
+		Concatenating the results:
+		\begin{align*}
+			\tau\begin{pmatrix}x\\y\\1\end{pmatrix}=&\begin{pmatrix}k_x&s&x_0\\0&k_y&y_0\\0&0&1\end{pmatrix}
+			\begin{pmatrix}f&0&0\\0&f&0\\0&0&f\end{pmatrix}\cdot\\
+			&\begin{pmatrix}r_{11}&r_{12}&r_{13}\\r_{21}&r_{22}&r_{23}\\r_{31}&r_{32}&r_{33}\end{pmatrix}
+			\begin{pmatrix}X-C_1\\Y-C_2\\Z-C_3\end{pmatrix}
+		\end{align*}
+		This yields the \textbf{calibration matrix} $K$:
+		\begin{align*}
+			K&=\begin{pmatrix}k_x&s&x_0\\0&k_y&y_0\\0&0&1\end{pmatrix}\begin{pmatrix}f&0&0\\0&f&0\\0&0&f\end{pmatrix}\\
+			 &=\begin{pmatrix}fk_x&fs&x_0\\0&fk_y&y_0\\0&0&1\end{pmatrix}
+		\end{align*}
+		We define: $\mathbf{p}=\begin{pmatrix}x\\y\\1\end{pmatrix};\ \mathbf{P}=\begin{pmatrix}X\\Y\\Z\end{pmatrix};\ 
+					\mathbf{\tilde{P}}=\begin{pmatrix}X\\Y\\Z\\1\end{pmatrix}$
+		\par 
+		yielding the \textcolor{red}{\textbf{projection equation}} for a pinhole camera, for some non-zero $\rho\in\mathbb{R}$: 
+		\ceqbox{\rho\mathbf{p}=KR^t\left(\mathbf{P}-\mathbf{C}\right)}
+		If also homogeneous coordinates are used for the scene points, then the projection equation becomes: 
+		\par 
+		\hspace{0.3cm}$\rho\mathbf{p}=K\left(R^t\ \vert\ -R^t\mathbf{C}\right)\mathbf{\tilde{P}}\qquad\vert:=$concatenate
+		\par 
+		or,
+		\par 
+		\hspace{0.3cm}$\rho\mathbf{p}=K\left(M\ \vert\ \mathbf{t}\right)\mathbf{\tilde{P}}\qquad$ with $\text{rank} \ M = 3$
+		\par 
+		The last equation follows from linear algebra from which we see that $KR^t$ can be any invertible $3\times3$ matrix $M$
+		and that $-KR^t\mathbf{C}$ can be any column vector $\mathbf{t}\in\mathbb{R}^3$.
+		\par 
 		
-		 
 		\subsubsection{Photometric camera model}
+		From object radiance to pixel gray level in 2 steps: 
+		\begin{enumerate}[noitemsep]
+			\item From object radiance to image irradiance
+			\item From image irradiance to pixel gray level. 
+		\end{enumerate}
+		\textbf{1. From object radiance to image irradiance:}\\
+		We look at the irradiance that an object patch will cause in the image. Assumptions:
+		\begin{itemize}[noitemsep]
+			\item Radiance $R$ is known
+			\item Object at far distance compared to focal length
+		\end{itemize}
+		Is image irradiance directly related to radiance of the object patch? We look at the following viewing condition: 
+		\begin{center}
+			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/image_irradiance.png}\\
+		\end{center}
+		With a few calculations and a little black magic we obtain the \textcolor{red}{$\mathbf{\cos^4}$ \textbf{law}}:
+		\ceqbox{I=R\dfrac{A_l}{f^2}\cos^4\alpha}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				\includegraphics[width=\columnwidth, height=2cm]{images/ImageAcq/fish_eye.png}\\
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}[b]{0.49\columnwidth}
+			\begin{flushleft}
+				This effect is especially strong for wide-angle and fish eye lenses. 
+				\vspace{0.5cm}
+			\end{flushleft}
+		\end{minipage}
+	
+		\textbf{2. From irradiance to gray levels}\\
+		The relation of irradiance to gray level has the form of: 
+		\ceqbox{f=gI^{\gamma}+d}
+		\begin{tabular}{l l}
+			f:&  resulting gray level\\ 
+			I:&  irradiance\\ 
+			g:&  so-called \textit{gain} of camera (constant)\\ 
+			$\gamma$:&  non-linearity of the camera \\ 
+			d:&  \textit{dark reference}\\  
+		\end{tabular}
+		\par 
+		The \textit{gain} $g$ can be set with the diaphragm size. Nowadays $\gamma$ is pretty close to 1. The \textit{dark reference} $d$ is the signal measured with the lens cap on. 
+		\par 
+		
+		
 		\section{Feature Extraction}	
 		
 		 
