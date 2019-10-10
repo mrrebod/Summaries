@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.9.29)  8 OCT 2019 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.9.29)  10 OCT 2019 13:15
 entering extended mode
 **./ImageAnalysis_CompVision_summary.tex
 (ImageAnalysis_CompVision_summary.tex
@@ -1579,7 +1579,7 @@ Overfull \hbox (2.28099pt too wide) in paragraph at lines 614--631
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
@@ -1587,16 +1587,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 643--644
 File: images/ImageAcq/prism_color_camera.png Graphic file (type png)
 <use images/ImageAcq/prism_color_camera.png>
 Package pdftex.def Info: images/ImageAcq/prism_color_camera.png  used on input 
-line 645.
-(pdftex.def)             Requested size: 132.67415pt x 68.66803pt.
+line 647.
+(pdftex.def)             Requested size: 94.76767pt x 49.04617pt.
 <images/ImageAcq/bayer_filter.png, id=243, 352.9185pt x 126.4725pt>
 File: images/ImageAcq/bayer_filter.png Graphic file (type png)
 <use images/ImageAcq/bayer_filter.png>
 Package pdftex.def Info: images/ImageAcq/bayer_filter.png  used on input line 6
-54.
+56.
 (pdftex.def)             Requested size: 170.58064pt x 61.13066pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
@@ -1604,16 +1604,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 660--661
 File: images/ImageAcq/filter_wheel.png Graphic file (type png)
 <use images/ImageAcq/filter_wheel.png>
 Package pdftex.def Info: images/ImageAcq/filter_wheel.png  used on input line 6
-62.
-(pdftex.def)             Requested size: 132.67415pt x 90.95105pt.
+64.
+(pdftex.def)             Requested size: 113.72235pt x 77.95885pt.
 <images/ImageAcq/perspective_projection.png, id=245, 416.757pt x 272.217pt>
 File: images/ImageAcq/perspective_projection.png Graphic file (type png)
 <use images/ImageAcq/perspective_projection.png>
 Package pdftex.def Info: images/ImageAcq/perspective_projection.png  used on in
-put line 687.
+put line 691.
 (pdftex.def)             Requested size: 189.53534pt x 123.80077pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--688
+Underfull \hbox (badness 10000) in paragraph at lines 689--692
 
  []
 
@@ -1621,14 +1621,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 685--688
 File: images/ImageAcq/rotation_matrices.png Graphic file (type png)
 <use images/ImageAcq/rotation_matrices.png>
 Package pdftex.def Info: images/ImageAcq/rotation_matrices.png  used on input l
-ine 713.
+ine 717.
 (pdftex.def)             Requested size: 132.67415pt x 182.89539pt.
 [5 <./images//ImageAcq/radial_dist.png> <./images/ImageAcq/radial_dist_2.png> <
 ./images//ImageAcq/chromatic_aberration.png> <./images//ImageAcq/achromatizatio
 n.png> <./images//ImageAcq/ccd_cmos.png> <./images/ImageAcq/prism_color_camera.
 png> <./images/ImageAcq/bayer_filter.png> <./images/ImageAcq/filter_wheel.png> 
 <./images/ImageAcq/perspective_projection.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
@@ -1636,36 +1636,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 724--725
 File: images/ImageAcq/pixel_coordinates.png Graphic file (type png)
 <use images/ImageAcq/pixel_coordinates.png>
 Package pdftex.def Info: images/ImageAcq/pixel_coordinates.png  used on input l
-ine 726.
+ine 730.
 (pdftex.def)             Requested size: 132.67415pt x 139.29494pt.
 <images/ImageAcq/image_irradiance.png, id=263, 509.5035pt x 233.07076pt>
 File: images/ImageAcq/image_irradiance.png Graphic file (type png)
 <use images/ImageAcq/image_irradiance.png>
 Package pdftex.def Info: images/ImageAcq/image_irradiance.png  used on input li
-ne 806.
+ne 812.
 (pdftex.def)             Requested size: 132.67415pt x 60.68942pt.
 <images/ImageAcq/fish_eye.png, id=264, 171.64125pt x 172.2435pt>
 File: images/ImageAcq/fish_eye.png Graphic file (type png)
 <use images/ImageAcq/fish_eye.png>
-Package pdftex.def Info: images/ImageAcq/fish_eye.png  used on input line 812.
+Package pdftex.def Info: images/ImageAcq/fish_eye.png  used on input line 818.
 (pdftex.def)             Requested size: 92.87083pt x 56.9036pt.
 [6 <./images/ImageAcq/rotation_matrices.png> <./images/ImageAcq/pixel_coordinat
 es.png> <./images/ImageAcq/image_irradiance.png> <./images/ImageAcq/fish_eye.pn
-g>] 
+g>] [7] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 843.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 843.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 852.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 852.
 (ImageAnalysis_CompVision_summary.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 843.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 843.
-Package rerunfilecheck Info: File `ImageAnalysis_CompVision_summary.out' has no
-t changed.
-(rerunfilecheck)             Checksum: 6472A20DB7599D590DA90FD6FD8FF05E;1626.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 843.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 852.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 852.
+
+
+Package rerunfilecheck Warning: File `ImageAnalysis_CompVision_summary.out' has
+ changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ImageAnalysis_CompVision_summary.ou
+t':
+(rerunfilecheck)             Before: 6472A20DB7599D590DA90FD6FD8FF05E;1626
+(rerunfilecheck)             After:  450CF3719FA74F950F275E150B88F0F1;1738.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 852.
  ) 
 Here is how much of TeX's memory you used:
- 23180 strings out of 492895
- 434978 string characters out of 3123735
+ 23183 strings out of 492895
+ 435012 string characters out of 3123735
  660820 words of memory out of 3000000
  26531 multiletter control sequences out of 15000+200000
  12363 words of font info for 48 fonts, out of 3000000 for 9000
@@ -1688,10 +1696,10 @@ pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Us
 ers/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/Marco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on ImageAnalysis_CompVision_summary.pdf (6 pages, 9712355 bytes)
+Output written on ImageAnalysis_CompVision_summary.pdf (7 pages, 9713270 bytes)
 .
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  482 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -629,7 +629,10 @@
 			\hline
 		\end{tabular}
 		\par
-		In 2006 was year of sales cross-over and in 2015 Sony said to stop CCD chip production. 
+		In 2006 was year of sales cross-over and in 2015 Sony said to stop CCD chip production.
+		
+		\vfill\null
+		\columnbreak 
 		\subsubsection{Color cameras}
 		We consider 3 concepts: 
 		\begin{enumerate}[noitemsep]
@@ -637,12 +640,11 @@
 			\item Filter mosaic 
 			\item Filter wheel 
 		\end{enumerate}
-		\vfill\null
-		\columnbreak
+
 		
 		\textbf{1. Prism color camera}\\
 		\begin{center}
-			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/prism_color_camera.png}\\
+			\includegraphics[width=0.5\columnwidth]{images/ImageAcq/prism_color_camera.png}\\
 		\end{center}
 		Separates light in 3 different beams using dichroic prism\\ 
 		\textcolor{red}{ -- Requires 3 Sensors \& precise alignment}\\
@@ -659,16 +661,16 @@
 		\par 
 		\textbf{3. Filter wheel}\\
 		\begin{center}
-			\includegraphics[width=0.7\columnwidth]{images/ImageAcq/filter_wheel.png}\\
+			\includegraphics[width=0.6\columnwidth]{images/ImageAcq/filter_wheel.png}\\
 		\end{center}
-		Rotate multiple filters in front of lens
+		Rotate multiple filters in front of lens\\
 		\textcolor{red}{ -- Only suitable for static scenes}\\
 		\textcolor{ForestGreen}{+ Allows more than 3 color bands}
 		
 		\begin{tabular}{l l l l}
 			\hline 
 			\hline 
-			Approach  &Prism  &Mosaic  &Wheel  \\
+					  &Prism  &Mosaic  &Wheel  \\
 			\hline  
 			\#Sensors &3  	 &1  	  &1  \\ 
 			Resolution&High  &Average &Good  \\ 
@@ -680,7 +682,9 @@
 			\hline 
 			\hline 
 		\end{tabular} 
-	
+		\vfill\null
+		\columnbreak
+		
 		\subsubsection{Geometric models}
 		\textbf{Perspective projection}\\
 		Perspective projection is the projection of the object to a \textbf{virtual image plane} in front of the lens. We choose the virtual image plane so that we do not need to care about the rotation of the picture. The \textbf{center of projection} is the \textbf{center of the lens} (pinhole).\\
@@ -788,6 +792,8 @@
 		The last equation follows from linear algebra from which we see that $KR^t$ can be any invertible $3\times3$ matrix $M$
 		and that $-KR^t\mathbf{C}$ can be any column vector $\mathbf{t}\in\mathbb{R}^3$.
 		\par 
+		\vfill\null
+		\columnbreak
 		
 		\subsubsection{Photometric camera model}
 		From object radiance to pixel gray level in 2 steps: 
@@ -832,11 +838,14 @@
 		\par 
 		The \textit{gain} $g$ can be set with the diaphragm size. Nowadays $\gamma$ is pretty close to 1. The \textit{dark reference} $d$ is the signal measured with the lens cap on. 
 		\par 
-		
+		\vfill\null
+		\columnbreak
 		
 		\section{Feature Extraction}	
+		\subsection{Color}
+		\subsection{Texture}
 		
-		 
+		
 		
 	\end{multicols*}
 	\setcounter{secnumdepth}{3}
