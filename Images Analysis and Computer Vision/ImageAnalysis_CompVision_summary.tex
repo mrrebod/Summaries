@@ -907,8 +907,26 @@
 			R_i(\lambda)&=\int\sum_{j=1}^{3}m_jP_j(\lambda)H_i(\lambda)d\lambda\\
 						&=\sum_{j=1}^{3}m_j\int P_j(\lambda)H_i(\lambda)d\lambda
 		\end{align*}
+		The integrals can be calculated off-line, because they are fix once the primaries have been chosen, hence we can write: \hspace{0.2cm}$l_{i,j}=\int P_j(\lambda)H_i(\lambda)d\lambda$\\
+		Knowing the human responses Ri to the source, we obtain a linear system of equations to be solved for the $m_j$:
+		\ceqbox{\sum_{j=1}^{3}m_jl_{i,j}=R_i}
+		To solve this we need to invert the matrix $l_{i,j}$, therefore the primaries have to bee independent with respect to human vision (none of them can be produced as a linear combination of the other two). When we use different primaries, we obtain a linear transformation between the two $m_j$s of the the two system of primaries.
+		\begin{align*}
+			L\cdot m&=R\\
+			L'\cdot m'&=R
+		\end{align*} 
+		gives 
+		\begin{align*}
+			m'&=L'^{-1}\cdot L\cdot m\\
+		\end{align*}
 		
-		 
+		\subsubsection{Tristimulus values}
+		Since "white" can be considered a natural reference, one will usually specify relative values with respect to the amounts of the primaries needed for some standard white source, written $w_j$. These \textcolor{red}{\textbf{tristimulus values}} for the source $C(\lambda)$ are then: 
+		\ceqbox{T_j=\dfrac{m_j}{w_j}}
+		By definition, the standard white source has \textit{tristimulus values} 1 ($T_1 = T_2 = T_3 = 1$). For the CIE primaries, the corresponding tristimulus values are generally called \textcolor{red}{R},\textcolor{ForestGreen}{G},\textcolor{blue}{B}.The CIE standard white is defined to have a flat energy spectrum ($w_1=w_2=w_3$). \\
+		The \textcolor{red}{\textbf{spectral matching curves} $T_j(\lambda')$} give the tristimulus values for monochromatic sources $C_{\lambda'}$ with wavelength $\lambda'$:
+		\ceqbox{R_i(C_\lambda)=H_i(\lambda)=\sum_{j=1}^{3}m_jl_{i,j}=\sum_{j=1}^{3}w_jl_{i,j}T_j(\lambda)}
+		
 		\subsection{Texture}
 		
 		
