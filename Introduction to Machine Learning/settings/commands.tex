@@ -146,9 +146,9 @@
     \setlength{\fboxsep}{0cm}%already boxed
     \colorbox{\StyleColor!40}{%
         \begin{minipage}{\linewidth}%
-            \vspace*{3pt}%Space before
+            \vspace*{2pt}%Space before
             #1
-            \vspace*{1pt}%Space after
+            \vspace*{-1pt}%Space after
         \end{minipage}%
     }}
 
@@ -176,7 +176,7 @@
 			#1
 			\vspace*{-1pt}%Space after
 		\end{minipage}%
-	}}
+}}
 
 % highlighter
 \newcommand{\hilight}[1]{\colorbox{\StyleColor}{#1}}
@@ -190,7 +190,7 @@
    \colorbox{green!100}{$\displaystyle #1$}}  
 
 % equation box        
-\newcommand{\eqbox}[1]{\setlength{\fboxrule}{1mm}\fcolorbox{\StyleColor}{white}{\hspace{0.5em}$\displaystyle#1$\hspace{0.5em}}}
+\newcommand{\eqbox}[1]{\setlength{\fboxrule}{1mm}\fcolorbox{red}{white}{\hspace{0.5em}$\displaystyle#1$\hspace{0.5em}}}
 
 %center equationbox
 \newcommand{\ceqbox}[1]{\vspace*{4pt} \begin{center}\eqbox{#1}\end{center}\vspace*{4pt}}

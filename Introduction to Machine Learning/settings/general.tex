@@ -16,7 +16,7 @@
 \usepackage{fancyhdr}
 %\usepackage{lastpage}
 %\usepackage{lmodern}
-%\usepackage{enumerate}
+\usepackage{enumerate}
 %\usepackage{float} % for positioning of figures
 \usepackage[landscape, margin=1cm]{geometry}
 \usepackage[dvipsnames]{xcolor}
@@ -34,6 +34,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
+%\usepackage{adjustbox}
 %\usepackage{dsfont}
 %\usepackage{esint} % provides \oiint
 \usepackage{mathrsfs}
@@ -50,11 +51,13 @@
 %\usepackage{framed}
 %\usepackage{trfsigns}
 \usepackage{tikz}
+\usepackage{wrapfig}
 %\usepackage[lofdepth,lotdepth]{subfig}
 %\usepackage{tikz}  %Graphen zeichnen
 %\usetikzlibrary{decorations.pathmorphing}
 %\usetikzlibrary{arrows.meta,arrows}
 %\usepackage{pgfplots}
+
 %% General Settings %%
 %\setlength{\parindent}{0px}
 %\setkomafont{captionlabel}{\normalfont\bfseries}
@@ -87,10 +90,26 @@
 %\usepackage{mparhack} % bessere margiale bei seitenumbruch
 
 % make document compact
-\usepackage[compact]{titlesec}
-\titlespacing{\section}{0pt}{*1}{*1}
-\titlespacing{\subsection}{0pt}{*1}{*1}
-\titlespacing{\subsubsection}{0pt}{*1}{*1}
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{*1}{*1}
+%\titlespacing{\subsection}{0pt}{*1}{*1}
+%\titlespacing{\subsubsection}{0pt}{*1}{*1}
+
+\RedeclareSectionCommand[
+	%runin=false,
+	%afterindent=false,
+	beforeskip=3pt,
+	afterskip=3pt]{section}
+\RedeclareSectionCommand[
+	%runin=false,
+	%afterindent=false,
+	beforeskip=0pt,
+	afterskip=2pt]{subsection}
+\RedeclareSectionCommand[
+	%runin=false,
+	%afterindent=false,
+	beforeskip=0pt,
+	afterskip=1pt]{subsubsection}
 
 \parindent 0pt
 \pagestyle{empty}
